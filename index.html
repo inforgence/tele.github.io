@@ -50,6 +50,11 @@ button {
 </style>
 </head>
 <body>
+ <!--쿠팡.info-->
+   <div class="iframes-container">
+    <iframe src="https://coupa.ng/cdPmUE" width="100%" height="75" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+  </div>
+<hr>
 <div class="container">
     <h1>전화번호 추출기</h1>
     <label for="input-text">넣고 싶은 문장을 넣으세요. <br>전화번호(숫자)만 추출해 줍니다:</label>
@@ -70,7 +75,7 @@ data-ad-height = "100"></ins>
 </div>
 <script>
 function extractNumbers() {
-    const regex = /(\+?\d{1,3})?[-. (]*\(?\d{1,4}\)?[-. )]*(\d{1,4}[-. ]?){1,6}\d{1,4}/g;
+    const regex = /(\+?\d{1,3}[-. ]?)?(\(\d{1,3}\)|\d{1,3})[-. ]?\d{1,4}[-. ]?\d{1,4}([- ]?\d{1,6})?/g;
     const inputText = document.getElementById('input-text').value;
     const phoneNumbers = inputText.match(regex) || [];
 
